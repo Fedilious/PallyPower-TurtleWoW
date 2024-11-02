@@ -468,14 +468,11 @@ function PallyPower_ScanSpells()
         local numTalents = GetNumTalents(t);
         for i = 1, numTalents do
             nameTalent, icon, iconx, icony, currRank, maxRank = GetTalentInfo(t, i);
-            local _, _, bless = string.find(nameTalent, PallyPower_BlessingTalentSearch)
-            if bless then
+            if nameTalent == PallyPower_BlessingTalentName then
                 initalized = true;
-                for id, name in PallyPower_BlessingID do
-                    if name == bless then
-                        if (RankInfo[id]) then
-                            RankInfo[id]["talent"] = currRank;
-                        end
+                for id, name in PallyPower_TalentAffectedBlessingID do
+                    if (RankInfo[id]) then
+                        RankInfo[id]["talent"] = currRank;
                     end
                 end
             end
@@ -1064,9 +1061,9 @@ function PallyPowerBuffButton_OnClick(btn, mousebtn)
             SpellTargetUnit(unit)
             PP_NextScan = 1
 			if (FiveMinBlessing == true) then
-				LastCast[btn.buffID .. btn.classID] = 5 * 60;
+				LastCast[btn.buffID .. btn.classID] = 10 * 60;
 			else
-				LastCast[btn.buffID .. btn.classID] = 15 * 60;
+				LastCast[btn.buffID .. btn.classID] = 30 * 60;
 			end
             LastCastOn[btn.classID] = {}
             tinsert(LastCastOn[btn.classID], unit)
