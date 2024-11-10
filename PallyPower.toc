@@ -1,6 +1,6 @@
 ## Interface: 11200
-## Title: |cFFFF8080Relar|r PallyPower |cff7fff7f1.081|r |cffabd473Turtle-WoW|r
-## Author: Relar
+## Title: |cFFFF8080Fedi's|r PallyPower |cff7fff7f1.081|r |cffabd473Turtle-WoW|r
+## Author: Fedilia
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariablesPerCharacter: PallyPower_Assignments, FiveMinuteBlessingOn, PP_PerUser

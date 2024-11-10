@@ -13,10 +13,6 @@ PallyPower_BlessingID[5] = "Sanctuary";
 
 PallyPower_BlessingTalentName = "Improved Blessings";
 
-PallyPower_TalentAffectedBlessingID = { };
-PallyPower_TalentAffectedBlessingID[0] = "Wisdom"
-PallyPower_TalentAffectedBlessingID[1] = "Wisdom"
-
 if (FiveMinBlessing == false) 
   then
     PallyPower_BlessingSpellSearch = "Greater Blessing of (.*)";

@@ -470,7 +470,7 @@ function PallyPower_ScanSpells()
             nameTalent, icon, iconx, icony, currRank, maxRank = GetTalentInfo(t, i);
             if nameTalent == PallyPower_BlessingTalentName then
                 initalized = true;
-                for id, name in PallyPower_TalentAffectedBlessingID do
+                for id in [0, 1] do -- Wisdom and Might
                     if (RankInfo[id]) then
                         RankInfo[id]["talent"] = currRank;
                     end
@@ -495,7 +495,7 @@ end
 
 function PallyPower_Refresh()
 	if ppRefreshAfterClear ~= true then
-		DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Relar PallyPower|r -- |cffFFFF00Refreshing...|r")
+		DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Fedi's PallyPower|r -- |cffFFFF00Refreshing...|r")
 	end
 
 	--ADDED THESE TO FIX THE REFRESH NOT WORKING
