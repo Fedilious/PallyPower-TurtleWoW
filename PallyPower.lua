@@ -470,11 +470,8 @@ function PallyPower_ScanSpells()
             nameTalent, icon, iconx, icony, currRank, maxRank = GetTalentInfo(t, i);
             if nameTalent == PallyPower_BlessingTalentName then
                 initalized = true;
-                for id in [0, 1] do -- Wisdom and Might
-                    if (RankInfo[id]) then
-                        RankInfo[id]["talent"] = currRank;
-                    end
-                end
+                RankInfo[0]["talent"] = currRank;
+                RankInfo[1]["talent"] = currRank;
             end
         end
     end
