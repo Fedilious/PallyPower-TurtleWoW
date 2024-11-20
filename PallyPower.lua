@@ -87,7 +87,7 @@ function PallyPower_OnLoad()
         PallyPower_SlashCommandHandler(msg)
     end
 	
-	DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080Relar|r PallyPower for TurtleWoW version "..PallyPower_Version.." |cff00FF00loaded successfully!|r")
+	DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080Fedi's|r PallyPower for TurtleWoW version "..PallyPower_Version.." |cff00FF00loaded successfully!|r")
 end
 
 function PallyPower_OnUpdate(tdiff)
@@ -512,9 +512,9 @@ function PallyPower_Refresh()
     PallyPower_UpdateUI()
 	
 	if ppRefreshAfterClear ~= true then
-		DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Relar PallyPower|r -- |cff00FF00Refresh complete!|r")
+		DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Fedi's PallyPower|r -- |cff00FF00Refresh complete!|r")
 	elseif ppRefreshAfterClear == true then
-		DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Relar PallyPower|r -- |cff00FF00Clearing complete!|r")
+		DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Fedi's PallyPower|r -- |cff00FF00Clearing complete!|r")
 		ppRefreshAfterClear = false
 	end
 end
@@ -530,11 +530,11 @@ function PallyPower_Clear(fromupdate, who)
     for name, skills in PallyPower_Assignments do
         if (PallyPower_CheckRaidLeader(who) or name == who) then
             if name == who then
-				DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Relar PallyPower|r -- |cffFFFF00Clearing...|r")
+				DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Fedi's PallyPower|r -- |cffFFFF00Clearing...|r")
 			else
 				if (clearTime + 5) < GetTime() then
 					clearTime = GetTime()
-					DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Relar PallyPower|r -- |cffFFFF00Clearing as requested by leader: |r"..who)
+					DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080    Fedi's PallyPower|r -- |cffFFFF00Clearing as requested by leader: |r"..who)
 				end
 			end
 			for class, id in PallyPower_Assignments[name] do
